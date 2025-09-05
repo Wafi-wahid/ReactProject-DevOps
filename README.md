@@ -18,3 +18,8 @@
 
 README.md created by Wafi Wahid
 Basic React Project setup by Wafi Wahid
+
+## Version 2:
+
+[Nigarish 10941f1] Nigarish Section
+ 1 file changed, 11 insertions(+)
