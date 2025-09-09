@@ -20,7 +20,7 @@ README.md created by Wafi Wahid
 Basic React Project setup by Wafi Wahid
 
 ## Version 3:
-[Manahil 59cc70f] add Nagarash section in code
+[Manahil 59cc70f] add Manahil section in code
  1 file changed, 11 insertions(+)
 
 ## Version 2:
