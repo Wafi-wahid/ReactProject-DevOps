@@ -19,7 +19,14 @@
 README.md created by Wafi Wahid
 Basic React Project setup by Wafi Wahid
 
-
 ## Version 3:
 [Manahil 59cc70f] Added Manahil's Section
+=======
+## Version 2:
+
+[Nagarash 0619085] add Nagarash section in code
+ 1 file changed, 11 insertions(+)
+
+## Version 4:
+[Jaweriya b9e216b] add Jaweriya section in code
  1 file changed, 11 insertions(+)
