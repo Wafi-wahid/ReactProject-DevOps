@@ -1,17 +1,17 @@
-FROM node:18
+FROM node:22-alpine
 
 # Set working directory
 WORKDIR /app
 
-# Copy package.json and install dependencies
+# Install dependencies
 COPY package*.json ./
 RUN npm install
 
-# Copy frontend code
+# Copy all source code
 COPY . .
 
-# Expose frontend port
-EXPOSE 3000
+# Expose Vite dev server port
+EXPOSE 5173
 
-# Start frontend
-CMD ["npm", "start"]
+# Start Vite dev server
+CMD ["npm", "run", "dev", "--", "--host"]
