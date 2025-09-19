@@ -21,14 +21,14 @@
 README.md created by Wafi Wahid<br>
 Basic React Project setup by Wafi Wahid
 
-## Version 3:
-
-[Manahil 59cc70f] add Manahil section in code
-1 file changed, 11 insertions(+)
-
 ## Version 2:
 
 [Nagarash 0619085] add Nagarash section in code
+1 file changed, 11 insertions(+)
+
+## Version 3:
+
+[Manahil 59cc70f] add Manahil section in code
 1 file changed, 11 insertions(+)
 
 ## Version 4:
@@ -36,11 +36,6 @@ Basic React Project setup by Wafi Wahid
 [Jaweriya b9e216b] add Jaweriya section in code
  1 file changed, 11 insertions(+)
 
-## Version 2:
-[Nagarash 0619085] add dockerfile, nagarash
- 1 file changed, 5 insertions(+)
-=======
-1 file changed, 11 insertions(+)
 
 ## Version 5:
 
@@ -53,3 +48,7 @@ Basic React Project setup by Wafi Wahid
 
 [main b7fee7e] add dockerfile, wafi
 1 file changed, 17 insertions(+)
+
+## Version 2:
+[Nagarash 0619085] add dockerfile, nagarash
+ 1 file changed, 5 insertions(+)
