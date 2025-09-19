@@ -16,5 +16,5 @@
 
 ## Version 1:
 
-README.md created by Wafi Wahid
+README.md created by Wafi Wahid<br>
 Basic React Project setup by Wafi Wahid
