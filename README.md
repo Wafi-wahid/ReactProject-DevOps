@@ -34,6 +34,12 @@ Basic React Project setup by Wafi Wahid
 ## Version 4:
 
 [Jaweriya b9e216b] add Jaweriya section in code
+ 1 file changed, 11 insertions(+)
+
+## Version 2:
+[Nagarash 0619085] add dockerfile, nagarash
+ 1 file changed, 5 insertions(+)
+=======
 1 file changed, 11 insertions(+)
 
 ## Version 5:
