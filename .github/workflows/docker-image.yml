@@ -1,18 +1,35 @@
-name: Docker Image CI
+name: React App CI/CD
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - main   # jab main branch pe push ho to chale
   pull_request:
-    branches: [ "main" ]
 
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build React app
+        run: npm run build
+
+      - name: Build Docker image
+        run: docker build -t react-app .
+
+      - name: Save Docker image as artifact (optional)
+        uses: actions/upload-artifact@v3
+        with:
+          name: react-docker-image
+          path: ./  # docker image context
