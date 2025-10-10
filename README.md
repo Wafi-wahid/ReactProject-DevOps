@@ -60,3 +60,5 @@ Basic React Project setup by Wafi Wahid
 .github/workflows/docker-image.yml | 21 +++++++++++++++++++++
 1 file changed, 21 insertions(+)
 create mode 100644 .github/workflows/docker-image.yml
+
+workflow: on every push to main, and merged pull request, it triggers; build, push image on dockerHub, then deploy on EC2
