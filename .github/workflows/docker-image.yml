@@ -54,8 +54,9 @@ jobs:
             echo "Stopping old container (if any)..."
             docker rm -f my-devops-app || true
             echo "Pulling image..."
-            docker pull $IMAGE:latest
+            docker pull ${{ env.IMAGE }}:latest
             echo "Starting container..."
-            docker run -d --name my-devops-app --restart unless-stopped -p 80:80 $IMAGE:latest
+            docker run -d --name my-devops-app --restart unless-stopped -p 80:80 ${{ env.IMAGE }}:latest
+            sleep 2
             echo "Deployment complete. Running containers:"
             docker ps --filter "name=my-devops-app"
