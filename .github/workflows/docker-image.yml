@@ -51,12 +51,29 @@ jobs:
             set -e
             echo "Logging into Docker Hub on EC2..."
             echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
-            echo "Stopping old container (if any)..."
-            docker rm -f my-devops-app || true
+
+            echo "Attempting to free port 80 if occupied by a container..."
+            # find any container publishing host port 80 and remove it
+            holder=$(docker ps --format '{{.ID}} {{.Names}} {{.Ports}}' | grep '0.0.0.0:80' | awk '{print $1}' || true)
+            if [ -n "$holder" ]; then
+              echo "Found container using port 80: $holder — removing it"
+              docker rm -f "$holder" || true
+            fi
+
+            # If a host process (nginx/apache) listens on port 80, try to stop it (needs sudo)
+            if sudo ss -ltnp | grep -q ':80'; then
+              echo "Port 80 is used by a host process. Trying to stop nginx/apache..."
+              sudo systemctl stop nginx || sudo systemctl stop apache2 || echo "No nginx/apache found or sudo failed"
+            fi
+
             echo "Pulling image..."
-            docker pull ${{ env.IMAGE }}:latest
-            echo "Starting container..."
-            docker run -d --name my-devops-app --restart unless-stopped -p 80:80 ${{ env.IMAGE }}:latest
+            docker pull ${{ secrets.DOCKERHUB_USERNAME }}/my-devops-app:latest
+
+            echo "Starting container (publishing host port 80 -> container 80)..."
+            # remove any previous container with our name then start new one
+            docker rm -f my-devops-app || true
+            docker run -d --name my-devops-app --restart unless-stopped -p 80:80 ${{ secrets.DOCKERHUB_USERNAME }}/my-devops-app:latest
+
             sleep 2
             echo "Deployment complete. Running containers:"
             docker ps --filter "name=my-devops-app"
