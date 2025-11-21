@@ -51,3 +51,10 @@ Basic React Project setup by Wafi Wahid
 create mode 100644 .github/workflows/docker-image.yml
 
 workflow: on every push to main, and merged pull request, it triggers; build, push image on dockerHub, then deploy on EC2
+
+## Deliverable 5:
+### Version 1:
+[main  b7fee7e4]: added minikube setup
+3 files changed, 42 insertions(+), 2 deletions(-)
+create mode 100644 minikube-config.yaml
+
