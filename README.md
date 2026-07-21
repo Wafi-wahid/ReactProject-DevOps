@@ -5,13 +5,13 @@
 Designed and implemented a complete DevOps CI/CD pipeline to automate application build, testing, containerization, orchestration, and deployment. Leveraged modern DevOps practices to improve deployment reliability, scalability, and development efficiency using Docker, Kubernetes, Jenkins, GitHub Actions, and AWS EC2.
 
 ### Key Contributions
-• Containerized full-stack applications using Docker for consistent development and production environments.
-• Built automated CI/CD pipelines with Jenkins and GitHub Actions for continuous integration and deployment.
-• Orchestrated containerized workloads using Kubernetes for scalable and resilient application management.
-• Deployed and managed applications on Amazon EC2 instances.
-• Configured automated build, test, and deployment workflows to minimize manual intervention.
-• Implemented version control best practices and deployment automation using Git and GitHub.
-• Improved deployment consistency, application availability, and release efficiency through DevOps automation.
+• Containerized full-stack applications using Docker for consistent development and production environments.</br>
+• Built automated CI/CD pipelines with Jenkins and GitHub Actions for continuous integration and deployment.</br>
+• Orchestrated containerized workloads using Kubernetes for scalable and resilient application management.</br>
+• Deployed and managed applications on Amazon EC2 instances.</br>
+• Configured automated build, test, and deployment workflows to minimize manual intervention.</br>
+• Implemented version control best practices and deployment automation using Git and GitHub.</br>
+• Improved deployment consistency, application availability, and release efficiency through DevOps automation.</br>
 
 ### Technologies
 Docker • Kubernetes • Jenkins • GitHub Actions • AWS EC2 • Git • Linux • CI/CD • DevOps • Containerization • YAML • Shell Scripting • Nginx (if used)
